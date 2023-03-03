@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+<body style="margin-top: 30px;margin-left: 30px;">
+    <!-- <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input type="file" name="excel_file" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"  style="border: 1px solid black; padding: 5px;"  required="required"/>
+        <button type="submit"  style="border: 1px solid green; padding:5px; border-radius: 2px; cursor: pointer;">Upload</button>
+    </form> -->
+
+    <div class="container">
+        <div class="table-responsive">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Task ID</th>
+                <th scope="col">Error</th>
+                
+
+              </tr>
+            </thead>
+            <tbody>
+                {% for i in data  %}
+                <tr>
+                    <td>{{i.error_key}}</td>
+                    <td>{{i.error}}</td>
+                    
+                </tr>
+                {% endfor %}
+             
+            </tbody>
+          </table>
+        </div>
+      </div>
+    
+    <style>
+        body {
+        background: #d5cdf2;
+        color: #D2D1D5;
+        }
+        tr:nth-child(even) {
+        background-color: #c7bbef;
+        }
+        tr:nth-child(odd) {
+        background-color: #cec4ee;
+        }
+        th {
+        background-color: #cbc4e4;
+        color: white;
+        }
+        .noBorder {
+            border:none !important;
+        }
+    </style>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
+
+

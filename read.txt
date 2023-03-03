@@ -1,0 +1,1 @@
+start celery worker in window use that comand ----> celery -A <project_name>.celery worker --pool=solo -l INFO
